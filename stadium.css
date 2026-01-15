@@ -161,7 +161,15 @@ aside
         background-color: #d82c6e;
         padding: 2%;
     }
+    main
+    {
+        width: 100%;
+    }
 
+    aside
+    {
+     width: 0%;
+    }
     #grid {
         display: grid;
         grid-template: repeat(4, 25fr) / 1fr; 
