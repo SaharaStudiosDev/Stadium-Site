@@ -39,8 +39,9 @@ body
 
 #container
 {
-    max-width: 1280px;
-    max-height: auto;
+    width: 80vw;
+    max-width: none;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     outline: 4px #d7f2ff solid;
@@ -56,7 +57,8 @@ body
 #devs
 {
     display: grid;
-    grid-template: repeat(2, 3fr) / repeat(3, 2fr);
+    grid-template: repeat(9, auto) / repeat(1, 9fr);
+    height: auto;
     background-color: #d7f2ff;
     justify-content: space-evenly;
     border: 3.5px #1e0f34 solid;
@@ -64,7 +66,10 @@ body
 
 #falsefloat
 {
-    height: 30%;
+    padding: .5em;
+    align-self: start;
+    height: fit-content;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -76,7 +81,8 @@ body
 #grid
 {
     display: grid;
-    grid-template: repeat(2, 25fr) / repeat(2, 25fr);
+    grid-template: repeat(2, auto) / repeat(2, 25fr);
+    height: auto;
     background-color: #d7f2ff;
     justify-content: space-evenly;
     border: 3px #1e0f34 solid;
@@ -115,10 +121,66 @@ header
 
 #grid_item
 {
+    align-self: start;
+    height: fit-content;
     border: 3px #1e0f34 solid;
     padding: .5em;
     background-color: #37d98a;
     text-align: center;
+}
+
+#screenshots
+{
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+#screenshots #grid_item
+{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#screenshot-image
+{
+    display: block;
+    max-width: 100%;
+    max-height: 65vh;
+    height: auto;
+    margin: 1em auto;
+    object-fit: contain;
+}
+
+#screenshot-caption
+{
+    margin: 1em 0;
+}
+
+.carousel-controls
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.carousel-controls button
+{
+    min-width: 100px;
+    min-height: 56px;
+    padding: .5em 1.25em;
+    font: inherit;
+    color: #1e0f34;
+    background: transparent url("assets/images/button.png") center / 100% 100% no-repeat;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel-controls button:focus-visible
+{
+    outline: 3px solid #1e0f34;
+    outline-offset: 3px;
 }
 
 nav
@@ -129,7 +191,8 @@ nav
     flex-direction:row;
     justify-content: space-around;
     background-color: #d82c6e;
-    padding: 1%;
+    border: 3px #1e0f34 solid;
+    padding: .5em;
     margin:auto;
 }
 
@@ -137,7 +200,7 @@ main
 {
     padding: 1%;
     width: 80%;
-    border: 4px #1e0f34 solid;
+    border: 3px #1e0f34 solid;
 }
 
 aside
@@ -145,6 +208,7 @@ aside
     padding: 2% 0% 0% 0%;
     outline: inherit;
     width: 20%;
+    border: 3px #1e0f34 solid;
     display: flex;
     justify-content: end;
     background-color: #37d98a;
@@ -172,11 +236,11 @@ aside
     }
     #grid {
         display: grid;
-        grid-template: repeat(4, 25fr) / 1fr; 
+        grid-template: repeat(4, auto) / 1fr; 
     }
     #devs {
         display: grid;
-        grid-template: repeat(6, 25fr) / 1fr;
+        grid-template: repeat(6, auto) / 1fr;
         grid-gap: .3em;
     }
 }
